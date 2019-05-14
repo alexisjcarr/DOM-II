@@ -13,8 +13,8 @@ const grayBlock = document.querySelector(".block--gray");
 // LMAO Jk
 
 /* ===== Event Listeners for EACH block ===== */
-//upward bound
 
+// upward bound
 let count = 1;
 
 redBlock.addEventListener("click", event => {
@@ -40,4 +40,36 @@ pinkBlock.addEventListener("click", event => {
 grayBlock.addEventListener("click", event => {
   event.target.style.order -= count;
   count++;
+});
+
+// rightward bound
+let move0 = 300;
+let move1 = 300;
+let move2 = 300;
+let move3 = 300;
+let move4 = 300;
+
+redBlock.addEventListener("dblclick", event => {
+  TweenLite.to(redBlock, 2, { x: move0 });
+  move0 += 300;
+});
+
+blueBlock.addEventListener("dblclick", event => {
+  TweenLite.to(blueBlock, 2, { x: move1 });
+  move1 += 300;
+});
+
+greenBlock.addEventListener("dblclick", event => {
+  TweenLite.to(greenBlock, 2, { x: move2 });
+  move2 += 300;
+});
+
+pinkBlock.addEventListener("dblclick", event => {
+  TweenLite.to(pinkBlock, 2, { x: move3 });
+  move3 += 300;
+});
+
+grayBlock.addEventListener("dblclick", event => {
+  TweenLite.to(grayBlock, 2, { x: move4 });
+  move4 += 300;
 });
