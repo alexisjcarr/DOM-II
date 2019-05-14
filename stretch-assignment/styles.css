@@ -3,6 +3,21 @@ body {
   /*justify-content: center;*/
 }
 
+.slide-top {
+  animation: slide-top 1s linear forwards;
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+
 .blocks {
   margin-top: 5%;
   display: flex;
@@ -17,20 +32,25 @@ body {
 
 .block--red {
   background-color: red;
+  /* order: 1; */
 }
 
 .block--blue {
   background-color: blue;
+  /* order: 2; */
 }
 
 .block--green {
   background-color: green;
+  /* order: 3; */
 }
 
 .block--pink {
   background-color: pink;
+  /* order: 4; */
 }
 
 .block--gray {
   background-color: gray;
+  /* order: 5; */
 }
